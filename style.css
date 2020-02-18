@@ -1,0 +1,87 @@
+/* to make the div appear above the other
+ one it must be set to absolute and both 
+ should be in a parent. relative won't work because it has
+ a placeholder in it's place. absolute is what becomes
+completely removed from the document flow  */
+
+* {
+    height:0px;
+    width:0px;
+}
+.gallery {
+     display: flex;
+    flex-wrap: wrap; 
+    
+    margin: 0px;
+    padding: 0px;
+    width: 1000px;
+    height:auto;
+
+    
+  
+
+}
+
+
+
+ .parent {
+    margin:20px; 
+    height:280px;
+    width:450px;
+   }
+
+
+
+ .overProj{
+    
+     align-items: center;
+     justify-content: space-around; 
+     /* because the position is absolute, if you set the
+     width or height to 100%, it will be in relation
+      to the body not the parent */
+
+      height:280px;
+    width:450px; 
+   
+    background-color:rgb(0,0,255, 0.65);
+     display: none; 
+     position:absolute; 
+    
+
+     /* flexbox and inline block both add margin changes below */
+      margin-top: 20px; 
+      transition: all 0.9s ease-in-out;
+  
+  
+     
+}
+
+ .overProj h2 {
+    height:auto;
+    width:auto;
+    padding: 10px;
+    border:1px solid white;
+    border-radius: 10px;
+    color: orange;
+  
+
+}
+
+.overProj h2:hover {
+    color:black;
+    cursor: pointer;
+
+}
+
+
+
+.project{
+    height:280px;
+    width:450px; 
+   
+    background-color: darkcyan;
+    box-shadow:2px 2px 8px 2px;
+   
+      }  
+
+
